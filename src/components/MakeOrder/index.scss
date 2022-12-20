@@ -33,4 +33,9 @@
     margin: 0 0 60px;
     text-align: center;
   }
+
+  &__image {
+    min-width: 160px;
+    min-height: 280px;
+  }
 }
