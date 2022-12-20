@@ -1,0 +1,36 @@
+.make-order {
+  background: linear-gradient(55.95deg, #eff7ff 0%, #fff7f6 100%);
+  padding: 120px 0 110px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 100px;
+    max-width: 1265px;
+    margin: 0 auto;
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__help-text {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 150%;
+    margin: 0 0 8px;
+    color: $button-color;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    color: $dark-text;
+    margin: 0 0 60px;
+    text-align: center;
+  }
+}

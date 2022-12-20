@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    column-gap: 21px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $light-text;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+}

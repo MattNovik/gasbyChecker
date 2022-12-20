@@ -1,0 +1,79 @@
+.contacts {
+  background-color: $main-color;
+  padding: 60px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 199px;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  &__wrapper-tel-email,
+  &__wrapper-addres,
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    justify-content: space-between;
+  }
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    text-decoration: none;
+    color: $light-text;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: $light-text;
+  }
+
+  &__addres {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+    color: $light-text;
+  }
+
+  &__politic {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $light-text;
+    text-decoration: none;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: $light-text;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  &__social-list {
+    align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

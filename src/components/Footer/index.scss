@@ -1,0 +1,41 @@
+.footer {
+  padding: 50px 45px;
+  background-color: $color-default-white;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $light-text;
+  }
+
+  &__payment-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  &__payment-list {
+    display: flex;
+    column-gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  &__payment-text {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $light-text;
+  }
+}

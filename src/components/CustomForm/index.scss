@@ -1,0 +1,115 @@
+.custom-form {
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  row-gap: 13px;
+  padding: 44px 40px 26px;
+  background-color: $color-default-white;
+  border-radius: 20px;
+
+  &.second-form {
+    padding: 0 40px;
+    background-color: $color-transparent;
+    align-items: center;
+  }
+
+  &__inputs-wrapper {
+    display: flex;
+    column-gap: 16px;
+  }
+
+  &__input {
+    min-width: 250px;
+    padding: 16px 26px;
+    border: solid 1px $light-text-gray-700;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $dark-text;
+    font-family: $main-font;
+    outline: none;
+
+    &::placeholder {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      color: $light-text-gray-700;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 16px 17px;
+    min-width: 250px;
+    background-color: $button-color;
+    color: $color-default-white;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-family: $main-font;
+    cursor: pointer;
+  }
+
+  &__input-agreeament {
+    & + label {
+      padding: 0 0 0 22px;
+      position: relative;
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 100%;
+      color: $dark-text;
+      cursor: pointer;
+
+      & a {
+        color: inherit;
+        text-underline-offset: 2px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        height: 16px;
+        width: 16px;
+        background: $color-default-white;
+        border-radius: 2px;
+        border: solid 1px #ced4da;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 10px;
+        height: 8px;
+        background-image: url('../../assets/images/check.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
