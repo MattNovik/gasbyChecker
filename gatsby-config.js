@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   /* assetPrefix: './dist', */
-  assetPrefix: '__GATSBY_RELATIVE_PATH__',
+  /*   assetPrefix: '__GATSBY_RELATIVE_PATH__', */
   plugins: [
     'gatsby-plugin-sass',
     {
@@ -52,7 +52,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `@wardpeet/gatsby-plugin-static-site`,
-    'gatsby-plugin-relative-paths',
+    /*     `@wardpeet/gatsby-plugin-static-site`,
+    'gatsby-plugin-relative-paths', */
   ],
 };
