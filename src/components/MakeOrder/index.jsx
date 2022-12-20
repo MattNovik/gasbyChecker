@@ -13,7 +13,7 @@ const MakeOrder = () => {
           placeholder="blurred"
           width={154}
           height={272}
-          className="maker-order__image maker-order__image--left"
+          className="make-order__image make-order__image--left"
         />
         <div className="make-order__form-wrapper">
           <p className="make-order__help-text">РАЗМЕСТИТЬ ЗАКАЗ</p>
@@ -29,7 +29,7 @@ const MakeOrder = () => {
           placeholder="blurred"
           width={166}
           height={286}
-          className="maker-order__image maker-order__image--right"
+          className="make-order__image make-order__image--right"
         />
       </div>
     </section>

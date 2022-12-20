@@ -160,15 +160,17 @@
 
   & .swiper-button-next {
     position: absolute;
-    right: 117px;
+    left: 50%;
+    /* right: 117px; */
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(600px, -50%);
   }
 
   & .swiper-button-prev {
     position: absolute;
-    left: 117px;
+    left: 50%;
+    /* left: 117px; */
     top: 50%;
-    transform: rotate(180deg) translate(0, 50%);
+    transform: rotate(180deg) translate(624px, 50%);
   }
 }

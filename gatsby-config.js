@@ -35,6 +35,19 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Студсервис',
+        short_name: 'Студсервис',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        display: 'standalone',
+        icon: './src/assets/images/favicon.png',
+        crossOrigin: `use-credentials`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
