@@ -79,7 +79,7 @@
     min-height: 280px;
 
     @include vp--1023 {
-      display: none;
+      display: none !important;
     }
 
     & img {

@@ -157,7 +157,8 @@
 
     @include vp--767 {
       min-height: 100%;
-      height: 542px;
+      height: 100%;
+      /* height: 542px; */
     }
   }
 
