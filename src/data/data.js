@@ -1,15 +1,19 @@
 const MENU_LIST = [
   {
     name: 'Заказать',
+    to: '#orders',
   },
   {
     name: 'Отзывы',
+    to: '#reviews',
   },
   {
     name: 'Процесс',
+    to: '#process',
   },
   {
     name: 'Контакты',
+    to: '#contacts',
   },
 ];
 

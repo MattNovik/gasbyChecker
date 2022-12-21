@@ -8,7 +8,7 @@ import Email from '../../assets/svg/email.svg';
 
 const Contacts = () => {
   return (
-    <section className="contacts">
+    <section className="contacts" id="contacts">
       <div className="contacts__container">
         <div className="contacts__wrapper-tel-email">
           <p className="contacts__title">Контакты:</p>

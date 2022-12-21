@@ -3,11 +3,12 @@ import * as React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-const CustomForm = ({ classname }) => {
+const CustomForm = ({ classname, id }) => {
   const formik = useFormik({
     initialValues: {
       theme: '',
       email: '',
+      agreeament: true,
     },
     validateOnChange: false,
     onSubmit: (values) => {
@@ -19,6 +20,7 @@ const CustomForm = ({ classname }) => {
     <form
       className={classname ? 'custom-form ' + classname : 'custom-form'}
       onSubmit={formik.handleSubmit}
+      id={id ? id : 'form'}
     >
       <div className="custom-form__inputs-wrapper">
         <input
@@ -42,6 +44,9 @@ const CustomForm = ({ classname }) => {
         </button>
       </div>
       <input
+        name="agreeament"
+        defaultChecked={formik.values.agreeament}
+        onChange={formik.handleChange}
         className="custom-form__input-agreeament visibility-hidden"
         id={classname ? 'agreeament' + classname : 'agreeament'}
         type="checkbox"

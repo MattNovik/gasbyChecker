@@ -24,7 +24,7 @@ const StartPage = () => {
           height={713}
           alt="stud-first"
         />
-        <CustomForm classname={'first-form'} />
+        <CustomForm classname={'first-form'} id={'orders'} />
       </div>
     </div>
   );

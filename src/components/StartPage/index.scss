@@ -3,6 +3,11 @@
   margin: -91px 0 0 0;
   padding: 91px 0 0 0;
 
+  @include vp--1023 {
+    margin: -50px 0 0;
+    padding: 50px 0 0 0;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -13,6 +18,25 @@
     background-color: $main-color;
     border-radius: 0 90px 90px 0;
     z-index: -1;
+
+    @include vp--1439 {
+      width: 88%;
+    }
+
+    @include vp--1199 {
+      width: 93%;
+    }
+
+    @include vp--1023 {
+      top: 50px;
+      height: 418px;
+    }
+
+    @include vp--767 {
+      width: 100%;
+      height: 365px;
+      border-radius: 0;
+    }
   }
 
   &:after {
@@ -25,6 +49,23 @@
     background-color: #fff8f7;
     border-radius: 0 0 0 120px;
     z-index: -1;
+
+    @include vp--1439 {
+      width: 46%;
+    }
+
+    @include vp--1199 {
+      width: 47%;
+    }
+
+    @include vp--1023 {
+      width: 44%;
+      height: 318px;
+    }
+
+    @include vp--767 {
+      width: 61%;
+    }
   }
 
   &__container {
@@ -37,6 +78,25 @@
     margin: 0 auto;
     min-height: 701px;
     z-index: 10;
+
+    @include vp--1439 {
+      padding: 0 60px;
+    }
+
+    @include vp--1199 {
+      padding: 0 60px 10px;
+    }
+
+    @include vp--1023 {
+      min-height: 586px;
+      padding: 68px 15px 30px;
+      justify-content: space-between;
+    }
+
+    @include vp--767 {
+      min-height: 700px;
+      padding: 30px 15px 0;
+    }
   }
 
   &__main-image {
@@ -44,10 +104,46 @@
     right: 0;
     top: 0;
     z-index: -1;
+
+    @include vp--1439 {
+      right: 60px;
+    }
+
+    @include vp--1023 {
+      right: 15px;
+    }
+
+    @include vp--767 {
+      right: -80px;
+    }
+
+    & img {
+      @include vp--1439 {
+        width: 460px;
+      }
+
+      @include vp--1023 {
+        width: 317px;
+        height: 417px;
+      }
+
+      @include vp--767 {
+        width: 277px;
+        height: 365px;
+      }
+    }
   }
 
   &__text-wrapper {
     max-width: 50%;
+
+    @include vp--1439 {
+      max-width: 55%;
+    }
+
+    @include vp--767 {
+      max-width: 50%;
+    }
   }
 
   &__help-text {
@@ -56,6 +152,12 @@
     font-size: 1rem;
     color: $button-color;
     margin: 0 0 35px;
+
+    @include vp--767 {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin: 0 0 20px;
+    }
   }
 
   &__title {
@@ -64,6 +166,22 @@
     line-height: 4.625rem;
     margin: 0 0 35px;
     color: $dark-text;
+
+    @include vp--1199 {
+      font-size: 3.2rem;
+    }
+
+    @include vp--1023 {
+      font-size: 2.875rem;
+      line-height: 3.5rem;
+      margin: 0 0 30px;
+    }
+
+    @include vp--767 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      margin: 0 0 20px;
+    }
   }
 
   &__info-text {
@@ -72,5 +190,10 @@
     line-height: 1.625rem;
     color: $light-text;
     margin: 0;
+
+    @include vp--767 {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
   }
 }

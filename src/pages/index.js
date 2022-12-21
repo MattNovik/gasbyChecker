@@ -3,13 +3,40 @@ import * as React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Main from '../components/Main';
+import Wrapper from '../components/Wrapper';
 
 const IndexPage = () => {
+  const wrapperRef = React.useRef(null);
+  const menuRef = React.useRef(null);
+
+  const html = document.querySelector('html');
+
+  const handleOpenMenu = () => {
+    wrapperRef.current.classList.add('open');
+    menuRef.current.classList.add('open');
+    html.classList.add('hidden');
+  };
+
+  const handleCloseMenu = () => {
+    wrapperRef.current.classList.remove('open');
+    menuRef.current.classList.remove('open');
+    html.classList.remove('hidden');
+  };
+
   return (
     <>
-      <Header />
+      <Header
+        menuRef={menuRef}
+        handleClose={handleCloseMenu}
+        handleOpen={handleOpenMenu}
+      />
       <Main />
       <Footer />
+      <Wrapper
+        wrapperRef={wrapperRef}
+        menuRef={menuRef}
+        handleClose={handleCloseMenu}
+      />
     </>
   );
 };

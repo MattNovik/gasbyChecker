@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 const WorkProcess = ({ data }) => {
   return (
-    <section className="work-process">
+    <section className="work-process" id="process">
       <div className="work-process__container">
         <div className="work-process__image-wrapper">
           <StaticImage

@@ -10,7 +10,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const CustomSwiper = ({ data }) => {
   console.log(data);
   return (
-    <section className="custom-swiper">
+    <section className="custom-swiper" id="reviews">
       <div className="custom-swiper__container">
         <p className="custom-swiper__help-text">Отзывы</p>
         <h2 className="custom-swiper__title">Что о нас говорят студенты?</h2>
