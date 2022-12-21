@@ -16,6 +16,7 @@ const CustomSwiper = ({ data }) => {
         <h2 className="custom-swiper__title">Что о нас говорят студенты?</h2>
         <Swiper
           modules={[Navigation, Pagination]}
+          autoHeight={true}
           className="custom-swiper__wrapper"
           spaceBetween={0}
           slidesPerView={1}
