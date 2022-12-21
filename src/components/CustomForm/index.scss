@@ -53,6 +53,15 @@
       line-height: 1.25rem;
       color: $light-text-gray-700;
     }
+
+    &.error {
+      color: $error-color;
+      border: solid 1px $error-color;
+
+      &::placeholder {
+        color: $error-color;
+      }
+    }
   }
 
   &__button {
@@ -81,6 +90,16 @@
   }
 
   &__input-agreeament {
+    &.error {
+      & + label {
+        color: $error-color;
+
+        &::before {
+          border: solid 1px $error-color;
+        }
+      }
+    }
+
     & + label {
       padding: 0 0 0 22px;
       position: relative;

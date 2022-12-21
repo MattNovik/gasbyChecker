@@ -10,7 +10,12 @@ const CustomForm = ({ classname, id }) => {
       email: '',
       agreeament: true,
     },
-    validateOnChange: false,
+    /* validateOnChange: false, */
+    validationSchema: Yup.object().shape({
+      theme: Yup.string().required('Заполните это поле'),
+      email: Yup.string().email('Введите email').required('Заполните это поле'),
+      agreeament: Yup.bool().oneOf([true], ''),
+    }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
@@ -26,15 +31,23 @@ const CustomForm = ({ classname, id }) => {
         <input
           type="text"
           name="theme"
-          className="custom-form__input"
+          className={
+            formik.errors.theme
+              ? 'custom-form__input error'
+              : 'custom-form__input'
+          }
           value={formik.values.theme}
           onChange={formik.handleChange}
-          placeholder={'ТЕМА'}
+          placeholder="ТЕМА"
         />
         <input
           type="text"
           name="email"
-          className="custom-form__input"
+          className={
+            formik.errors.email
+              ? 'custom-form__input error'
+              : 'custom-form__input'
+          }
           value={formik.values.email}
           onChange={formik.handleChange}
           placeholder={'ВАШ E-MAIL'}
@@ -47,7 +60,11 @@ const CustomForm = ({ classname, id }) => {
         name="agreeament"
         defaultChecked={formik.values.agreeament}
         onChange={formik.handleChange}
-        className="custom-form__input-agreeament visibility-hidden"
+        className={
+          formik.errors.agreeament
+            ? 'custom-form__input-agreeament visibility-hidden error'
+            : 'custom-form__input-agreeament visibility-hidden'
+        }
         id={classname ? 'agreeament' + classname : 'agreeament'}
         type="checkbox"
       />
