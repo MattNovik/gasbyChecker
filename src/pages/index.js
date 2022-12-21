@@ -8,8 +8,11 @@ import Wrapper from '../components/Wrapper';
 const IndexPage = () => {
   const wrapperRef = React.useRef(null);
   const menuRef = React.useRef(null);
+  let html;
 
-  const html = document.querySelector('html');
+  if (typeof document !== 'undefined') {
+    html = document.querySelector('html');
+  }
 
   const handleOpenMenu = () => {
     wrapperRef.current.classList.add('open');
