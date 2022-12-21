@@ -64,6 +64,10 @@
     }
 
     @include vp--767 {
+      width: 310px;
+    }
+
+    @include vp--569 {
       width: 200px;
     }
   }
@@ -114,6 +118,10 @@
     }
 
     @include vp--767 {
+      right: 30px !important;
+    }
+
+    @include vp--569 {
       right: -80px !important;
     }
 
@@ -128,6 +136,12 @@
       }
 
       @include vp--767 {
+        right: 30px !important;
+        width: 277px !important;
+        height: 365px !important;
+      }
+
+      @include vp--569 {
         right: -80px !important;
         width: 277px !important;
         height: 365px !important;
@@ -143,7 +157,7 @@
     }
 
     @include vp--767 {
-      max-width: 50%;
+      max-width: 49%;
     }
   }
 

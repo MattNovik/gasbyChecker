@@ -8,7 +8,7 @@ $button-color: #0a71cc;
 $light-text: #737373;
 $light-text-gray-700: #787a80;
 $dark-text: #1e212c;
-$error-color: rgb(182, 21, 21);
+$error-color: #dc3545;
 
 $main-font: 'Montserrat', 'Arial', sans-serif;
 
@@ -16,6 +16,7 @@ $vp--320: 320px;
 $vp--360: 360px;
 $vp--375: 375px;
 $vp--500: 500px;
+$vp--570: 570px;
 $vp--768: 768px;
 $vp--900: 900px;
 $vp--1024: 1024px;
@@ -86,6 +87,12 @@ $vp--2560: 2560px;
 
 @mixin vp--767 {
   @media (max-width: $vp--768 - 1) {
+    @content;
+  }
+}
+
+@mixin vp--569 {
+  @media (max-width: $vp--570 - 1) {
     @content;
   }
 }

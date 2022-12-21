@@ -41,6 +41,7 @@
     color: $dark-text;
     font-family: $main-font;
     outline: none;
+    transition: border-color 0.3s ease, color 0.3s ease;
 
     @include vp--1023 {
       width: 100%;
@@ -82,10 +83,15 @@
     text-transform: uppercase;
     font-family: $main-font;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 
     @include vp--1023 {
       width: 100%;
       min-width: 200px;
+    }
+
+    &:hover {
+      background-color: #085da8;
     }
   }
 

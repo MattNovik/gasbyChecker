@@ -2,6 +2,7 @@ import './index.scss';
 import * as React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 const CustomForm = ({ classname, id }) => {
   const formik = useFormik({
@@ -14,10 +15,47 @@ const CustomForm = ({ classname, id }) => {
     validationSchema: Yup.object().shape({
       theme: Yup.string().required('Заполните это поле'),
       email: Yup.string().email('Введите email').required('Заполните это поле'),
-      agreeament: Yup.bool().oneOf([true], ''),
+      agreeament: Yup.bool().oneOf([true], 's'),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: (values, action) => {
+      axios
+        .post(
+          'https://studservis.ru/v2/wp-content/themes/studservice/ajax/createOrder.php',
+          {
+            data: values, // данные для отправки
+            dataType: 'json',
+            processData: false,
+            cache: false,
+            contentType: false,
+          }
+        )
+        .then((response) => {
+          console.log(response);
+          if (
+            typeof response.link !== 'undefined' &&
+            response.link.length > 0
+          ) {
+            return (window.location.href = response.link);
+          }
+          if (response.order_id && response.action === 'userIsset') {
+            return (window.location.href =
+              'https://studservis-lk.ru/' +
+              'orders/newOrder/id=' +
+              response.order_id +
+              '/new/');
+          } else {
+            return (window.location.href = 'https://studservis-lk.ru/');
+          }
+        })
+        .catch((error) => console.log('error'));
+      /* action.resetForm({
+        values: {
+          theme: '',
+          email: '',
+          agreeament: true,
+        },
+      }); */
+      /* alert(JSON.stringify(values, null, 2)); */
     },
   });
 

@@ -15,17 +15,32 @@ const Footer = () => {
           <p className="footer__title">Мы в соцсетях:</p>
           <ul className="footer__social-list">
             <li className="footer__social-item tg">
-              <a href="#tg">
+              <a
+                href="https://t.me/StudSHelp_Bot"
+                aria-label="tg link"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Tg />
               </a>
             </li>
-            <li className="footer__social-item ok">
-              <a href="#ok">
+            <li className="menu__social-item ok">
+              <a
+                href="https://vk.com/referat"
+                aria-label="ok link"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Ok />
               </a>
             </li>
-            <li className="footer__social-item vk">
-              <a href="#vk">
+            <li className="menu__social-item vk">
+              <a
+                href="https://vk.com/referat"
+                aria-label="vk link"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Vk />
               </a>
             </li>

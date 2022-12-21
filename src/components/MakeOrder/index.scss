@@ -75,17 +75,17 @@
   }
 
   &__image {
-    min-width: 160px;
-    min-height: 280px;
+    min-width: 160px !important;
+    min-height: 280px !important;
 
     @include vp--1023 {
       display: none !important;
     }
 
     & img {
-      width: auto;
-      height: auto;
-      object-fit: contain;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
     }
 
     &--left {
@@ -95,7 +95,7 @@
 
       & img {
         @include vp--1439 {
-          margin-left: auto;
+          margin-left: auto !important;
         }
       }
     }

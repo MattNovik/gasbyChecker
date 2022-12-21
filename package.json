@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@wardpeet/gatsby-plugin-static-site": "^0.3.0",
+    "axios": "^1.2.1",
     "formik": "^2.2.9",
     "gatsby": "^5.0.0",
     "gatsby-plugin-image": "^3.3.2",

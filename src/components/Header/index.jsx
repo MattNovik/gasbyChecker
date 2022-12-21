@@ -16,6 +16,7 @@ const Header = ({ menuRef, handleOpen, handleClose }) => {
           className="header__burger"
           type="button"
           onClick={() => handleOpen()}
+          aria-label="open-menu"
         >
           <Burger />
         </button>

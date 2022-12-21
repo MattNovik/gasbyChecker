@@ -22,6 +22,10 @@
     z-index: 110;
   }
 
+  @include vp--767 {
+    width: 100%;
+  }
+
   &.open {
     @include vp--1023 {
       opacity: 1;
@@ -87,6 +91,11 @@
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $dark-text;
+    }
   }
 
   &__enters {
@@ -113,15 +122,16 @@
     padding: 5px;
     cursor: pointer;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     color: $light-text;
     font-weight: 700;
     font-family: $main-font;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    text-decoration: none;
 
     &:hover {
-      background-color: $color-default-white;
+      color: $dark-text;
     }
   }
 
@@ -141,5 +151,95 @@
     font-family: $main-font;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__wrapper-tel-email,
+  &__socials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 17px;
+    justify-content: space-between;
+  }
+
+  &__wrapper-tel-email {
+    display: none;
+
+    @include vp--1023 {
+      display: flex;
+      /* margin: auto 0 0; */
+    }
+  }
+
+  &__socials {
+    display: none;
+
+    @include vp--1023 {
+      display: flex;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    text-decoration: none;
+    color: $light-text;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: $light-text;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $dark-text;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: $light-text;
+    margin: 0;
+    white-space: nowrap;
+
+    @include vp--767 {
+      white-space: normal;
+    }
+  }
+
+  &__social-list {
+    align-items: center;
+    height: 100%;
+    display: flex;
+    column-gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__social-item {
+    & a {
+      color: $light-text;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $dark-text;
+      }
+    }
   }
 }

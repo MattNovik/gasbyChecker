@@ -95,6 +95,11 @@
     font-size: 1rem;
     line-height: 160%;
     color: $light-text;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $dark-text;
+    }
   }
 
   &__addres {
@@ -103,6 +108,11 @@
     line-height: 1.25rem;
     text-decoration: none;
     color: $light-text;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $dark-text;
+    }
   }
 
   &__politic {
@@ -111,6 +121,11 @@
     line-height: 1.25rem;
     color: $light-text;
     text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $dark-text;
+    }
   }
 
   &__title {
@@ -134,5 +149,16 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  &__social-item {
+    & a {
+      color: $light-text;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $dark-text;
+      }
+    }
   }
 }

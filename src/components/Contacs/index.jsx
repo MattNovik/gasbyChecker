@@ -12,7 +12,7 @@ const Contacts = () => {
       <div className="contacts__container">
         <div className="contacts__wrapper-tel-email">
           <p className="contacts__title">Контакты:</p>
-          <a href="tel:+7812409-31-63" className="contacts__tel">
+          <a href="tel:+78124093163" className="contacts__tel">
             <Phone /> +7 (812) 409-31-63
           </a>
           <a href="mailto:studservis@yandex.ru" className="contacts__email">
@@ -34,18 +34,33 @@ const Contacts = () => {
         <div className="contacts__socials">
           <p className="contacts__title">Мы в соцсетях:</p>
           <ul className="contacts__social-list">
-            <li className="contcats__social-item tg">
-              <a href="#tg">
+            <li className="contacts__social-item tg">
+              <a
+                href="https://t.me/StudSHelp_Bot"
+                aria-label="tg link"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Tg />
               </a>
             </li>
-            <li className="contcats__social-item ok">
-              <a href="#ok">
+            <li className="contacts__social-item ok">
+              <a
+                href="https://vk.com/referat"
+                aria-label="ok link"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Ok />
               </a>
             </li>
-            <li className="contcats__social-item vk">
-              <a href="#vk">
+            <li className="contacts__social-item vk">
+              <a
+                href="https://vk.com/referat"
+                aria-label="vk link"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Vk />
               </a>
             </li>
