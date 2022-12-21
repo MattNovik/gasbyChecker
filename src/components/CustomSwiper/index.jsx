@@ -28,7 +28,7 @@ const CustomSwiper = ({ data }) => {
             clickable: true,
           }}
           onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
+          /* onSwiper={(swiper) => console.log(swiper)} */
         >
           <button className="swiper-button-next" type="button">
             <ArrowLong />
