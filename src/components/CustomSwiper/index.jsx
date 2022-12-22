@@ -8,7 +8,6 @@ import ArrowLong from '../../assets/svg/arrowLong.svg';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const CustomSwiper = ({ data }) => {
-  console.log(data);
   return (
     <section className="custom-swiper" id="reviews">
       <div className="custom-swiper__container">
@@ -17,6 +16,8 @@ const CustomSwiper = ({ data }) => {
         <Swiper
           modules={[Navigation, Pagination]}
           autoHeight={true}
+          grabCursor={true}
+          loop={true}
           className="custom-swiper__wrapper"
           spaceBetween={0}
           slidesPerView={1}
