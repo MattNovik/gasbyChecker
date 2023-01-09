@@ -18,20 +18,24 @@ const CustomForm = ({ classname, id }) => {
       agreeament: Yup.bool().oneOf([true], 's'),
     }),
     onSubmit: (values, action) => {
+      let formData = new FormData();
+      formData.append('theme', values.theme);
+      formData.append('email', values.email);
+      formData.append('partnerId', document.querySelector('.partnerId').value);
       axios
         .post(
-          'https://studservis.ru/v2/wp-content/themes/studservice/ajax/createOrder.php',
+          'https://dev.studservis.ru/wp-content/themes/studservice/ajax/createOrder.php',
+          formData,
           {
-            data: values, // данные для отправки
-            dataType: 'json',
-            processData: false,
-            cache: false,
-            contentType: false,
+            auth: {
+              username: 'admin',
+              password: 'zde3jnm4HTD.gbq@amv',
+            },
           }
         )
         .then((response) => {
           console.log(response);
-          if (
+          /* if (
             typeof response.link !== 'undefined' &&
             response.link.length > 0
           ) {
@@ -45,7 +49,7 @@ const CustomForm = ({ classname, id }) => {
               '/new/');
           } else {
             return (window.location.href = 'https://studservis-lk.ru/');
-          }
+          } */
         })
         .catch((error) => console.log('error'));
       /* action.resetForm({
@@ -90,6 +94,7 @@ const CustomForm = ({ classname, id }) => {
           onChange={formik.handleChange}
           placeholder={'ВАШ E-MAIL'}
         />
+        <input type="hidden" name="partnerId" className="partnerId" value="1" />
         <button type="submit" className="custom-form__button">
           Рассчитать
         </button>
