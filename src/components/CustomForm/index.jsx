@@ -94,7 +94,12 @@ const CustomForm = ({ classname, id }) => {
           onChange={formik.handleChange}
           placeholder={'ВАШ E-MAIL'}
         />
-        <input type="hidden" name="partnerId" className="partnerId" value="1" />
+        <input
+          type="hidden"
+          name="partnerId"
+          className="partnerId"
+          value="#PARTNER_ID_VALUE#"
+        />
         <button type="submit" className="custom-form__button">
           Рассчитать
         </button>
